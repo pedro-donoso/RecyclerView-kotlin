@@ -2,46 +2,81 @@ package com.example.recyclerviewexample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.recyclerviewexample.ui.theme.RecyclerViewExampleTheme
 
 class MainActivity : ComponentActivity() {
+
+    val superHeroFirst = listOf<SuperHero>(
+       SuperHero(
+           "Spiderman",
+           "Marvel",
+           "Peter Parker",
+           "https://cursokotlin.com/wp-content/uploads/2017/07/spiderman.jpg"
+       ),
+        SuperHero(
+            "Batman",
+            "DC",
+            "Bruce Wayne",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/batman.jpg"
+        ),
+        SuperHero(
+            "Thor",
+            "Marvel",
+            "Thor Odinson",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/thor.jpg"
+        ),
+        SuperHero(
+            "Flash",
+            "DC",
+            "Jay Garrick",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/flash.png"
+        ),
+        SuperHero(
+            "Daredevil",
+            "Marvel",
+            "Matthew Michael Murdock",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/daredevil.jpg"
+        ),
+        SuperHero(
+            "Wonder Woman",
+            "DC",
+            "Princess Diana",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/wonder_woman.jpg"
+        ),
+        SuperHero(
+            "Green Arrow",
+            "DC",
+            "Oliver Queen",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/green_arrow.jpg"
+        ),
+        SuperHero(
+            "Batgirl",
+            "DC",
+            "Barbara Gordon",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/batgirl.jpg"
+        ),
+        SuperHero(
+            "Superwoman",
+            "DC",
+            "Kara Zor-El",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/superwoman.jpg"
+        ),
+        SuperHero(
+            "Green Lantern",
+            "DC",
+            "Alan Scott",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/green-lantern.jpg"
+        ),
+        SuperHero(
+            "Wolverine",
+            "Marvel",
+            "James Howlett",
+            "https://cursokotlin.com/wp-content/uploads/2017/07/logan.jpeg"
+        )
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            RecyclerViewExampleTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        setContentView(R.layout.activity_main)
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    RecyclerViewExampleTheme {
-        Greeting("Android")
-    }
-}
