@@ -15,3 +15,15 @@
 
 </FrameLayout>
 ```
+
+2. Configuro MainActivity.kt
+
+```
+   class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
