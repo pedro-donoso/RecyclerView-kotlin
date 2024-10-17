@@ -6,7 +6,9 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/teal_700"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,6 +43,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivSuperHero"
+            android:textStyle="italic"
+            android:textColor="#F3D660"
+            android:textSize="17sp"
             app:layout_constraintTop_toBottomOf="@id/tvSuperHeroName"
             tools:text="Pedro" />
 
