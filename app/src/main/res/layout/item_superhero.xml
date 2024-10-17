@@ -43,6 +43,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivSuperHero"
+            android:textStyle="italic"
+            android:textColor="#F3D660"
             android:textSize="17sp"
             app:layout_constraintTop_toBottomOf="@id/tvSuperHeroName"
             tools:text="Pedro" />
