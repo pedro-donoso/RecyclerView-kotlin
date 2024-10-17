@@ -102,6 +102,7 @@ class MainActivity : AppCompatActivity() {
 8. Creo funciones para iniciar RecyclerView y Seleccionar Item:
 
 ```
+...
     private fun initRecyclerView(){
         val manager = LinearLayoutManager(this)
         val decoration = DividerItemDecoration(this, manager.orientation)
@@ -114,11 +115,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-    fun onItemSelected(superHero: SuperHero){
-        Toast.makeText(this, superHero.superhero, Toast.LENGTH_SHORT).show()
-    }
-}
+...
 ```
 
 9. En carpeta layout creo item_superhero.xml con Card View:
@@ -219,4 +216,14 @@ class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.setOnClickListener { onClickListener(superHeroModel) }
     }
 }
+```
+
+12 - En MainActivity.kt agrego mensaje Toast:
+
+```
+...
+fun onItemSelected(superHero: SuperHero){
+        Toast.makeText(this, superHero.superhero, Toast.LENGTH_SHORT).show()
+    }
+...
 ```
