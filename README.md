@@ -27,7 +27,7 @@ dependencies {
 }
 ```
 
-3. En res -> new directory layout y en layout -> new Layout Resource File (Convierto a FrameLayout y creo recyclerview)
+3. En res -> new directory layout y en layout -> new Layout Resource File -> activity_main.xml (Convierto a FrameLayout y creo recyclerview)
 
 ```
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
