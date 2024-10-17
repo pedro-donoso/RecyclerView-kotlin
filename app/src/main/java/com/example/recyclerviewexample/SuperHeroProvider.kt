@@ -40,19 +40,23 @@ class SuperHeroProvider {
                 "https://cursokotlin.com/wp-content/uploads/2017/07/green-lantern.jpg"
             ),
             SuperHero(
+                "Iron Man",
+                "Marvel",
+                "Tony Stark",
+                "https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg"
+            ),
+            SuperHero(
                 "Spiderman",
                 "Marvel",
                 "Peter Parker",
                 "https://i.pinimg.com/originals/75/ee/62/75ee62dd2cf3ded21b9c15738b0654da.jpg"
             ),
-
             SuperHero(
                 "Storm",
                 "DC",
                 "Ororo Munroe",
                 "https://i.pinimg.com/originals/23/be/c4/23bec4b292721aa6cf93660a6b23e24d.jpg"
             ),
-
             SuperHero(
                 "Thor",
                 "Marvel",
@@ -65,19 +69,12 @@ class SuperHeroProvider {
                 "James Howlett",
                 "https://cursokotlin.com/wp-content/uploads/2017/07/logan.jpeg"
             ),
-
-
             SuperHero(
                 "Wonder Woman",
                 "DC",
                 "Princess Diana",
                 "https://cursokotlin.com/wp-content/uploads/2017/07/wonder_woman.jpg"
             )
-
-
-
-
-
         )
     }
 }
