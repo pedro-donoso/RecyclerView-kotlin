@@ -85,7 +85,21 @@ class MainActivity : AppCompatActivity() {
     }
 ```
 
-7. Creo funciones para iniciar RecyclerView y Seleccionar Item:
+7. En AndroidManifest.xml configuro Theme de la Activity y agrego Permiso de Internet:
+```
+ <uses-permission android:name="android.permission.INTERNET"/>
+        ...
+        <activity
+            android:name="MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        ...
+        </activity>
+    </application>
+```
+
+8. Creo funciones para iniciar RecyclerView y Seleccionar Item:
 
 ```
     private fun initRecyclerView(){
@@ -107,7 +121,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-8. En carpeta layout creo item_superhero.xml con Card View:
+9. En carpeta layout creo item_superhero.xml con Card View:
 
 ```
 <androidx.cardview.widget.CardView
@@ -168,7 +182,7 @@ class MainActivity : AppCompatActivity() {
 
 </androidx.cardview.widget.CardView>
 ```
-9 - En raíz del proyecto creo directorio SuperHeroAdapter.kt:
+10 - En raíz del proyecto creo directorio SuperHeroAdapter.kt:
 
 ```
 class SuperHeroAdapter(
@@ -189,7 +203,7 @@ class SuperHeroAdapter(
 }
 ```
 
-10 - En raíz del proyecto creo directorio SuperHeroViewHolder.kt:
+11 - En raíz del proyecto creo directorio SuperHeroViewHolder.kt:
 
 ```
 class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
