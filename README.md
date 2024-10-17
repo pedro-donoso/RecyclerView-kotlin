@@ -1,4 +1,113 @@
-![RecycleViewApp](https://github.com/user-attachments/assets/12cd0ba4-0406-4117-84b2-48ec0fb6b587)
+![pantalla](https://github.com/user-attachments/assets/6cc18367-afcb-490e-b9e6-cd0727d07065)
+
+### Creación de la App
+
+1. Configurar gradle(Module:app) para utilizar viewBinding:
+
+```
+buildFeatures {
+        compose = true
+        viewBinding = true
+    }
+    dataBinding {
+        enable = true
+    }
+```
+
+2. Agrego las dependencias a utilizar (glide, cardview, constraintlayout)
+
+```
+dependencies {
+...
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.glide)
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+...
+}
+```
+
+3. En res -> new directory layout y en layout -> new Layout Resource File (Convierto a FrameLayout y creo recyclerview)
+
+```
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSuperHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</FrameLayout>
+```
+
+4. Creo data class
+
+```
+data class SuperHero(
+    val superhero: String,
+    val publisher: String,
+    val realName: String,
+    val photo: String
+)
+```
+
+5. Creo SuperHeroProvider (con datos del superheroe/ina)
+
+```
+class SuperHeroProvider {
+    companion object {
+        val superHeroList = listOf<SuperHero>(
+            SuperHero(
+                "Batman",
+                "DC",
+                "Bruce Wayne",
+                "https://www.thedigitalfix.com/wp-content/sites/thedigitalfix/2022/12/batman-big-part-in-dceu.jpg"
+            ),
+            ...
+```
+
+6. Convierto MainActivity a AppCompatActivity:
+
+```
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initRecyclerView()
+    }
+```
+
+7. Creo funciones para iniciar RecyclerView y Seleccionar Item:
+
+```
+    private fun initRecyclerView(){
+        val manager = LinearLayoutManager(this)
+        val decoration = DividerItemDecoration(this, manager.orientation)
+        binding.recyclerSuperHero.layoutManager = manager
+        binding.recyclerSuperHero.adapter =
+            SuperHeroAdapter(SuperHeroProvider.superHeroList) { superhero ->
+            onItemSelected(
+                superhero
+            )
+        }
+
+    }
+
+    fun onItemSelected(superHero: SuperHero){
+        Toast.makeText(this, superHero.superhero, Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+
 
 ### Recycler View
 
