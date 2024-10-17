@@ -12,10 +12,10 @@ class SuperHeroAdapter(private val superHeroList: List<SuperHero>) : RecyclerVie
         return SuperHeroViewHolder(layoutInflater.inflate(R.layout.item_superhero, parent, false))
     }
 
-    override fun getItemCount(): Int = superHeroList.size
-
-
     override fun onBindViewHolder(holder: SuperHeroViewHolder, position: Int) {
-
+        val item = superHeroList[position]
+        holder.render(item)
     }
+
+    override fun getItemCount(): Int = superHeroList.size
 }
