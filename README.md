@@ -1,3 +1,5 @@
+![RecycleViewApp](https://github.com/user-attachments/assets/12cd0ba4-0406-4117-84b2-48ec0fb6b587)
+
 ### Recycler View
 
 - Un RecyclerView es un componente de interfaz de usuario en Android que permite mostrar una lista de elementos de manera eficiente y personalizable. Es una forma de mostrar una gran cantidad de datos en una pantalla, como una lista de artículos, una galería de imágenes, etc.
