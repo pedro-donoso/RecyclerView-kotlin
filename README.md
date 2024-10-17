@@ -1,4 +1,4 @@
-![pantalla](https://github.com/user-attachments/assets/6cc18367-afcb-490e-b9e6-cd0727d07065)
+![pantalla](https://github.com/user-attachments/assets/9ba140e8-8b2b-48e6-a268-c1a4d6272a13)
 
 ### Creación de la App
 
